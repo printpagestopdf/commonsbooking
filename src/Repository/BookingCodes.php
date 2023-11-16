@@ -291,7 +291,7 @@ class BookingCodes {
 
 		$bookingCodesArray = static::getCodesArray();
 		if (! $bookingCodesArray ){
-			throw new BookingCodeException( __( "No booking codes could be created because there were no booking codes to choose from. Please set some booking codes in the CommonsBooking settings.", 'commonsbooking' )  );
+			throw new BookingCodeException( __( "No booking codes could be created for this timeframe, because no initial booking codes were defined in the CommonsBooking settings.", 'commonsbooking' )  );
 		}
 		// Before we add new codes, we remove old ones, that are not relevant anymore
 		try {
